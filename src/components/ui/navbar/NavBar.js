@@ -15,7 +15,7 @@ const NavBar = () => {
           <FaBars />
         </NavBarIcon>
         <NavBarItems>
-          <NavBarLink exact to="/">
+          <NavBarLink exact to="/marvel">
             Marvel
           </NavBarLink>
           <NavBarLink exact to="/dc">
