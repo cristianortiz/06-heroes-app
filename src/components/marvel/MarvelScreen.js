@@ -1,7 +1,14 @@
 import React from "react";
+import HeroList from "../heroes/HeroList";
 
 const MarvelScreen = () => {
-  return <h1>Marvel Screen</h1>;
+  const publisher = "Marvel Comics";
+  return (
+    <>
+      <h1>Marvel Heroes</h1>
+      <HeroList publisher={publisher} />;
+    </>
+  );
 };
 
 export default MarvelScreen;
