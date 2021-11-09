@@ -1,6 +1,5 @@
 import React from "react";
-import { getHeroesByPublisher } from "../../selectors/getHeroByPublisher";
-import HeroList from "../heroes/HeroList";
+import HeroList from "../hero/HeroList";
 
 const DcScreen = () => {
   const publisher = "DC Comics";

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   CardContainer,
   CardImage,
-  CardTitleFlex,
+  CardTitle,
   CardBody,
   CardListItem,
   CardItemText,
@@ -19,17 +20,22 @@ const HeroCard = ({
   return (
     <>
       <CardContainer>
-        <CardTitleFlex>
-          <h3>{superhero}</h3>
-        </CardTitleFlex>
         <CardBody>
           <CardImage>
-            <img height="200" src={`./assets/heroes/${id}.jpg`}></img>
+            <img
+              alt={superhero}
+              height="200"
+              src={`./assets/heroes/${id}.jpg`}
+            ></img>
           </CardImage>
           <CardListItem>
+            <CardTitle>
+              <h3>{superhero}</h3>
+            </CardTitle>
             <CardItemText>{alter_ego}</CardItemText>
             <CardItemText>{characters}</CardItemText>
             <CardItemText>{first_appearance}</CardItemText>
+            <Link to={`../hero/${id}`}>More info</Link>
           </CardListItem>
         </CardBody>
       </CardContainer>
