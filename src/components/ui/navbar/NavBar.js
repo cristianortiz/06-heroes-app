@@ -15,13 +15,13 @@ const NavBar = () => {
           <FaBars />
         </NavBarIcon>
         <NavBarItems>
-          <NavBarLink exact to="/marvel">
+          <NavBarLink exact="true" to="/marvel">
             Marvel
           </NavBarLink>
-          <NavBarLink exact to="/dc">
+          <NavBarLink exact="true" to="/dc">
             DC
           </NavBarLink>{" "}
-          <NavBarLink exact to="/login">
+          <NavBarLink exact="true" to="/login">
             Log Out
           </NavBarLink>
         </NavBarItems>

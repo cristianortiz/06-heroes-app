@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router";
 import { getHeroByID } from "../../selectors/getHeroByID";
 import {
@@ -16,8 +16,9 @@ const HeroScreen = () => {
   //extract heroId usign dom useParams hook
   const { heroeId } = useParams();
   //console.log(heroeId);
-  //get info of a hero using their id
-  const hero = getHeroByID(heroeId);
+  //get info of a hero using their id, and render only if heroeId changes
+  const hero = useMemo(() => getHeroByID(heroeId), [heroeId]);
+  // const hero = getHeroByID(heroeId);
   const { superhero, id, alter_ego, publisher, first_appearance, characters } =
     hero;
   //a little validation if any hero is returned above

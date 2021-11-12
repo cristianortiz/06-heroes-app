@@ -35,7 +35,9 @@ const HeroCard = ({
             <CardItemText>{alter_ego}</CardItemText>
             <CardItemText>{characters}</CardItemText>
             <CardItemText>{first_appearance}</CardItemText>
-            <Link to={`../hero/${id}`}>More info</Link>
+            <Link exact="true" to={`../hero/${id}`}>
+              More info
+            </Link>
           </CardListItem>
         </CardBody>
       </CardContainer>

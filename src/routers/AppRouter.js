@@ -9,7 +9,7 @@ const AppRouter = () => {
       <Router>
         {/* in react-router-dom 6 Switch does not work replace with Routes */}
         <Routes>
-          <Route exact path="/login" element={<LoginScreen />} />
+          <Route exact="true" path="/login" element={<LoginScreen />} />
           {/* the * indicates nested routes in DashboardRoutes comp */}
           <Route path="/*" element={<DashboardRoutes />} />
         </Routes>

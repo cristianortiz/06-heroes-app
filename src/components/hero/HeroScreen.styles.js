@@ -1,4 +1,5 @@
 import styled from "@emotion/styled/";
+import "animate.css";
 
 export const HeroContainer = styled.div`
   position: relative;
@@ -8,6 +9,8 @@ export const HeroContainer = styled.div`
   min-height: 100vh;
   background: #f8f8fa;
   padding: 20px;
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.8s; /* don't forget to set a duration! */
 `;
 export const HeroTitle = styled.div`
   display: block;

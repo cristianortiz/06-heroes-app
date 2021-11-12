@@ -1,4 +1,5 @@
 import styled from "@emotion/styled/";
+import "animate.css";
 
 //-----general styles for all types of cards----
 export const HeroCardsBox = styled.div`
@@ -14,6 +15,8 @@ export const HeroCardsBox = styled.div`
   @media (max-width: 480px) {
     grid-template-columns: repeat(1, 1fr);
   }
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
 `;
 export const CardContainer = styled.div`
   position: relative;
