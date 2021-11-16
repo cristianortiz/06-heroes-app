@@ -4,6 +4,7 @@ import DcScreen from "../components/dc/DcScreen";
 import HeroScreen from "../components/hero/HeroScreen";
 import MarvelScreen from "../components/marvel/MarvelScreen";
 import NavBar from "../components/ui/navbar/NavBar";
+import SearchScreen from "../components/ui/search/SearchScreen";
 import { Container } from "./DashboardStyles.styles";
 
 const DashboardRoutes = () => {
@@ -15,6 +16,7 @@ const DashboardRoutes = () => {
           <Route exact="true" path="/marvel" element={<MarvelScreen />} />
           <Route exact="true" path="/hero/:heroeId" element={<HeroScreen />} />
           <Route exact="true" path="/dc" element={<DcScreen />} />
+          <Route exact="true" path="/search" element={<SearchScreen />} />
           {/* default route */}
           <Route path="*" element={<MarvelScreen />} />
         </Routes>

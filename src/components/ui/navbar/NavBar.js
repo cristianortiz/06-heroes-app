@@ -20,7 +20,10 @@ const NavBar = () => {
           </NavBarLink>
           <NavBarLink exact="true" to="/dc">
             DC
-          </NavBarLink>{" "}
+          </NavBarLink>
+          <NavBarLink exact="true" to="/search">
+            Search
+          </NavBarLink>
           <NavBarLink exact="true" to="/login">
             Log Out
           </NavBarLink>
