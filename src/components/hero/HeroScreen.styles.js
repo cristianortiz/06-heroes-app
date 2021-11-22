@@ -7,6 +7,7 @@ export const HeroContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
+  align-content: space-between;
   background: #f8f8fa;
   padding: 20px;
   animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
