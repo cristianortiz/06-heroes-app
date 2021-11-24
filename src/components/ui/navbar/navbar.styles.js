@@ -31,3 +31,13 @@ export const NavBarLink = styled(NavLink)`
   text-decoration: none;
   margin-right: 15px;
 `;
+export const UserDiv = styled.div`
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 5px 5px;
+`;
+export const UserSpan = styled.span`
+  color: lightblue;
+  text-decoration: none;
+  margin-right: 10px;
+`;
