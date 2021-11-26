@@ -17,6 +17,7 @@ const SearchScreen = () => {
   const location = useLocation();
   //separate search terms in query string
   const query = queryString.parse(location.search);
+
   //destructuring the first parameter 'q' from the query string
   const { q = "" } = query; //this keep the heroName
   //asign q search term to searchIput

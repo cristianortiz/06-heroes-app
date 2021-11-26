@@ -45,7 +45,7 @@ const NavBar = () => {
           </NavBarLink>
           <UserDiv>
             <UserSpan>Hello {user.username} </UserSpan>
-            <NavBarLink exact to="/login" onClick={handleLogout}>
+            <NavBarLink exact="true" to="/login" onClick={handleLogout}>
               Log Out
             </NavBarLink>
           </UserDiv>
