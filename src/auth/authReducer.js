@@ -14,6 +14,7 @@ export const AuthReducer = (state = {}, action) => {
         logged: true,
       };
     case types.logout:
+      //return only the logged prop as false, username is dropped
       return {
         logged: false,
       };
