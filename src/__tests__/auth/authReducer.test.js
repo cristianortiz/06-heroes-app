@@ -1,5 +1,4 @@
 import "@testing-library/dom";
-import { render, screen } from "@testing-library/react";
 import { AuthReducer } from "../../auth/authReducer";
 import { types } from "../../types/types";
 
