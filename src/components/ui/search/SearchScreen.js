@@ -39,7 +39,7 @@ const SearchScreen = () => {
     <>
       {
         <HeroSearch>
-          <h2>Search</h2>
+          <h2>Search a Hero</h2>
           <SearchForm onSubmit={handleSearch}>
             <InputForm
               type="text"
@@ -55,7 +55,7 @@ const SearchScreen = () => {
       <HeroCardsBox>
         {q === 0
           ? null
-          : heroesFiltered.length === 0 && <h3>There is no results..</h3>}
+          : heroesFiltered.length === 0 && <h3>There is no results : {q}</h3>}
         {heroesFiltered.map((hero) => (
           <HeroCard key={hero.id} {...hero} />
         ))}

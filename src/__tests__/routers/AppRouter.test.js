@@ -48,6 +48,6 @@ describe("Tests in <AppRouter />", () => {
     //the app title must be inside a h1 tag
     expect(screen.getByText("Marvel Heroes").tagName).toBe("H1");
     //the username must show in navbar inside a span tag
-    expect(screen.getByText("Hello Gou").tagName).toBe("SPAN");
+    expect(screen.getByText("Hello Goku").tagName).toBe("SPAN");
   });
 });
