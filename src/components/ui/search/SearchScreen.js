@@ -31,6 +31,7 @@ const SearchScreen = () => {
 
   //function to handle the search of heroes by name
   const handleSearch = (e) => {
+    console.log(searchText);
     e.preventDefault();
     //query string  with useNavigate
     navigate(`?q=${searchText}`);
@@ -40,7 +41,7 @@ const SearchScreen = () => {
       {
         <HeroSearch>
           <h2>Search a Hero</h2>
-          <SearchForm onSubmit={handleSearch}>
+          <SearchForm name="searchForm" onSubmit={handleSearch}>
             <InputForm
               type="text"
               name="searchText"
