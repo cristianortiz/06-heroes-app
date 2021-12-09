@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FaBars } from "react-icons/fa";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../auth/authContext";
 import { types } from "../../../types/types";
 import {
@@ -45,9 +45,7 @@ const NavBar = () => {
           </NavBarLink>
           <UserDiv>
             <UserSpan>Hello {user.username} </UserSpan>
-            <NavBarLink exact="true" to="/login" onClick={handleLogout}>
-              Log Out
-            </NavBarLink>
+            <button onClick={handleLogout}>Log Out</button>
           </UserDiv>
         </NavBarItems>
       </NavBarContainer>

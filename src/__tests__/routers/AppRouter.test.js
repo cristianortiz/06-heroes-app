@@ -23,7 +23,7 @@ describe("Tests in <AppRouter />", () => {
     //now the assertions
     //the text exists in the document
     expect(screen.getByText("Login Screen")).toBeInTheDocument();
-    //the app title must be inside a h2 tag
+    //the app title must be inside a h1 tag
     expect(screen.getByText("Login Screen").tagName).toBe("H1");
   });
 

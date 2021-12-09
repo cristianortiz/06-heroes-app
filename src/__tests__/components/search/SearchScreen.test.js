@@ -2,8 +2,8 @@ import React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
 
-import { MemoryRouter, useNavigate } from "react-router-dom";
-import SearchScreen from "../../components/ui/search/SearchScreen";
+import { MemoryRouter } from "react-router-dom";
+import SearchScreen from "../../../components/ui/search/SearchScreen";
 import userEvent from "@testing-library/user-event";
 
 //this simulate the navigate() func returned when useNavigate hook is invocated
