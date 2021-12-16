@@ -6,14 +6,14 @@ import { MemoryRouter } from "react-router-dom";
 import SearchScreen from "../../../components/ui/search/SearchScreen";
 import userEvent from "@testing-library/user-event";
 
-//this simulate the navigate() func returned when useNavigate hook is invocated
+//this simulate the navigate() func returned when useNavigate hook is invoked
 //always use mock to simulate hooks functions
 const mockNavigate = jest.fn();
 
 //mock of the entire reac-router-dom
 jest.mock("react-router-dom", () => ({
   //this keeps loading RRD normally to run te other test, but allows to overwrite
-  //other RDD functios to testing purpose
+  //other RDD functions to testing purpose
   ...jest.requireActual("react-router-dom"),
   //useNavigate returns navigate func so,  overwrite it to use a jest.fn() to simulate it
   useNavigate: () => mockNavigate,

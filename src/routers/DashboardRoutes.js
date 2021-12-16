@@ -13,10 +13,10 @@ const DashboardRoutes = () => {
       <NavBar />
       <Container>
         <Routes>
-          <Route exact="true" path="/marvel" element={<MarvelScreen />} />
-          <Route exact="true" path="/hero/:heroeId" element={<HeroScreen />} />
-          <Route exact="true" path="/dc" element={<DcScreen />} />
-          <Route exact="true" path="/search" element={<SearchScreen />} />
+          <Route path="/marvel" element={<MarvelScreen />} />
+          <Route path="/hero/:heroeId" element={<HeroScreen />} />
+          <Route path="/dc" element={<DcScreen />} />
+          <Route path="/search" element={<SearchScreen />} />
           {/* default route */}
           <Route path="*" element={<MarvelScreen />} />
         </Routes>

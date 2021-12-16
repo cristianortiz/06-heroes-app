@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Navigate, useNavigate, useParams } from "react-router";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getHeroByID } from "../../selectors/getHeroByID";
 import {
   HeroContainer,
@@ -12,24 +12,26 @@ import {
 } from "./HeroScreen.styles";
 
 const HeroScreen = () => {
-  let history = useNavigate();
+  const navigate = useNavigate();
+  const handleReturn = () => {
+    //console.log("aprete el boton return");
+    navigate(-1);
+  };
   //extract heroId usign dom useParams hook
   const { heroeId } = useParams();
   //console.log(heroeId);
   //get info of a hero using their id, and render only if heroeId changes
   const hero = useMemo(() => getHeroByID(heroeId), [heroeId]);
-  // const hero = getHeroByID(heroeId);
-  const { superhero, id, alter_ego, publisher, first_appearance, characters } =
-    hero;
-  //a little validation if any hero is returned above
+  //a  validation if any hero is returned above
   if (!hero) {
     return <Navigate to="/" />;
   }
-  const handleReturn = () => {
-    history(-1);
-  };
 
-  console.log(hero);
+  // const hero = getHeroByID(heroeId);
+  const { superhero, id, alter_ego, publisher, first_appearance, characters } =
+    hero;
+
+  //console.log(hero);
   return (
     <>
       <HeroContainer>

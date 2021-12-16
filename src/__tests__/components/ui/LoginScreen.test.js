@@ -32,19 +32,24 @@ describe("Test in <LoginScreen />", () => {
       <AuthContext.Provider value={contextValue}>
         {/* MemoryRouter provides the context for react-router hooks like useNavigation */}
         <MemoryRouter initialEntries={["/login"]}>
-          <LoginScreen />
+          <Routes>
+            <Route path="/login" element={<LoginScreen />} />
+          </Routes>
         </MemoryRouter>
       </AuthContext.Provider>
     );
 
     expect(screen.getByText("Login Screen").tagName).toBe("H1");
   });
+
   test("should call the dispatch and navigate with te correct arguments", () => {
     render(
       <AuthContext.Provider value={contextValue}>
         {/* MemoryRouter provides the context for react-router hooks like useNavigation */}
         <MemoryRouter initialEntries={["/login"]}>
-          <LoginScreen />
+          <Routes>
+            <Route path="/login" element={<LoginScreen />} />
+          </Routes>
         </MemoryRouter>
       </AuthContext.Provider>
     );
@@ -60,9 +65,9 @@ describe("Test in <LoginScreen />", () => {
       payload: { username: user.username },
     });
 
-    //test if the mockNavigate has been called with the real navigate url params in NavBar.js
+    //test if the mockNavigate has been called with the real navigate url params in LoginScreen
     expect(mockNavigate).toHaveBeenCalledWith("/marvel", { replace: true });
-    //test if locaStorage last path is set navigate() redirect to lastPath
+    //test if locaStorage last path is set and navigate() redirect to lastPath
     localStorage.setItem("lastPath", "/dc");
     userEvent.click(loginBtn);
     expect(mockNavigate).toHaveBeenCalledWith("/dc", { replace: true });
