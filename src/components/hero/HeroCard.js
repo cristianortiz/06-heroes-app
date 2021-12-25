@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import {
   CardContainer,
   CardImage,
@@ -25,7 +26,7 @@ const HeroCard = ({
             <img
               alt={superhero}
               height="200"
-              src={`./assets/heroes/${id}.jpg`}
+              src={`../assets/heroes/${id}.jpg`}
             ></img>
           </CardImage>
           <CardListItem>
